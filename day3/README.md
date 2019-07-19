@@ -10,11 +10,15 @@ Commands to install and use REACT:
 2. create-react-app -V
 	Returns version of react.
 
-Libraries:	
+Libraries: (npm install)	
 1. react -> To build components and enable communication between them.
 2. react-dom -> Renders the components as DOM
 3. react-scripts -> Takes all the js files and transpiles them using Babble and configure it into webpack in order to run via a web server.
 4. react-router-dom -> To enable routing
+5. express -> To create web server
+6. cors -> To serve cross origin requests.
+7. axios -> HTTP client api
+8. nodemon -> Collects server changes and refreshes automatically.
 	
 Steps to create & run a new REACT project:
 1. create-react-app firstapp
@@ -80,3 +84,16 @@ To resolve this issue, the scope of the component ("this") can be passed using
     <Switch> is used to group routes together. It can be used for dynamic route parameters.
     <Link to> is react equivalent of <a href> except that it doesn't refresh the page.
     Params can be sent in the link and route can be defined with ":" to accept param of any type. The value sent can be read in the component using props.match.params.xyz
+
+11. LifeCycle Methods
+    Mount
+        When an instance of component is inserted into DOM
+        Constructor()
+        render()
+        componentDidMount() -> after all the children gets mounted
+    Update
+        When a component's props or state changes
+    Unmount
+        When a component is removed from DOM
+    Error
+        Any form of error while rendering

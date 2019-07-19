@@ -1,0 +1,39 @@
+"Ant Man"
+"Scarlet Witch"
+"Deadpool"
+"Captain Marvel"
+"Captain America"
+"Spider Man"
+"Doctor Strange"
+"Black Panther"
+"Hulk"
+"Iron Man"
+"Black Widow"
+"Hawkeye"
+"Falcon"
+"Vision"
+"Thor"
+
+"Ant Man",
+"Scarlet Witch",
+"Deadpool",
+"Captain Marvel",
+"Captain America",
+"Spider Man",
+"Doctor Strange",
+"Black Panther",
+"Hulk",
+"Iron Man",
+"Black Widow",
+"Hawkeye",
+"Falcon",
+"Vision",
+"Thor"
+
+"Batman",
+"Robin",
+"Superman",
+"Wonder Woman",
+"Aquaman",
+"Flash",
+"Green Lantern"
