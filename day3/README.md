@@ -41,8 +41,35 @@ Notes:
 4. SASS, LESS, STYLUS, CSS can be used for styling.	
 
 5. Elements -> Components -> Composition (Composite Component)
-   A component can be used as a HTML tag later.
-	To create a component, there are 2 ways:
+
+6. Components:
+    6.1 A component can be used as a HTML tag later.
+	6.2 To create a component, there are 2 ways:
 		1. Create a class that extends Component. This class should have a render() method that returns the JSX element to be rendered.
-		2. Create a function and export it. This is also treated as a component. This uses lesser memory than (1)
-   A component can have props and states.
+		2. Create a function. This is also treated as a component. This uses lesser memory than (1)
+    6.3 A component can have props and states.
+        1. Props are attributes a component expects from outside. State is maintained inside a component by itself.
+        2. Props can be static, default, required, etc. There is no default state.
+        3. Props are immutable by default. State can be changed by the component.
+
+7. Lifecycle methods (Example: render()) of a component only can work with "this". Other methods like event handlers won't be able to access this.xyz.
+To resolve this issue, the scope of the component ("this") can be passed using
+    7.1 Bind at the calling portion -> Not efficient, as bind happens at each call
+    7.2 Fat arrow function -> Not efficient
+    7.3 Do the binding at the constructor -> One time, REACT recommended.
+
+8. Events
+    Event handlers are in camel case & prefixed with "on". Example: onClick, onChange, onFocus.
+    
+9. Forms
+    An action of # indicates that the form stays on the same page, i.e, the form is submitted to the same page.
+    The onSubmit callback gets called when you submit the html form by either clicking on any button or just by pressing “enter” while focused in one of the input fields.
+
+    Steps to create a form:
+    Step1: Write event listener for onSubmit that listens to the submit event.
+           Customize this event handler to prevent default actions that the browser performs.
+           Example: <form action="#"> -> By default, the browser submits the form to itself once form is completed. To prevent this, we can use evt.preventDefault()
+    Step2: Write appropriate event handlers for various input fields and buttons.
+
+10. Routes
+    Gives user multiple page feeling while actually there is only one underlying page.
