@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destructuring</title>
+    <script>
+        var obj1={
+            val1: 10,
+            val2: 20
+        };
+        let v1=obj1.val1;
+        let v2=obj1.val2;
+        console.log("Regular assignment to v1 and v2 -> v1 = "+v1+" v2 = "+v2);
+        let {val1:o1,val2:o2}=obj1;
+        console.log("Single line assignment to o1 and o2 -> o1 = "+o1+" o2 = "+o2);
+        let{val1,val2}=obj1;
+        console.log("Single line assignment to val1 and val2 variables "+
+                    "having same name as attributes of obj1 -> val1 = "+val1+" val2 = "+val2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

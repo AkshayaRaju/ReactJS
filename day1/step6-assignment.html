@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Step 6 - Assignment</title>
+    <script>
+        let cart = {
+            getCostPrice:function(){
+                return 100;
+            },
+            getSellingPrice:function(){
+                //Using call/apply/bind to pass the context
+                /*function calculateProfit(){
+                    return this.getCostPrice() * 0.2;
+                }
+                return calculateProfit.call(this) + this.getCostPrice();*/
+
+                //Using arrow function to define a function variable
+                let calculateProfit = ()=>{
+                    return this.getCostPrice() * 0.2;
+                }
+                return calculateProfit() + this.getCostPrice();
+            }
+        };
+        console.log("Cart's selling price -> "+cart.getSellingPrice());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

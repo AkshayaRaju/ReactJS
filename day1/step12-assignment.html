@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Step 12 Assignment</title>
+    <script>
+        var myId="mydiv";
+        var myCount = 1;
+        function createDiv(){
+            let bgColor = (Math.random()*1000000).toFixed(0);
+            document.getElementsByClassName("container")[0].innerHTML+=`
+            <div id=${myId+myCount} style="background-color:${"#"+bgColor}">I am a div</div>`;
+            myCount++;
+        }
+        function removeDiv(){
+            if(myCount>0){
+                myCount--;
+            }
+            document.getElementById(myId+myCount).remove();
+        }
+    </script>
+    <style>
+        .container *{
+            width: max-content;
+            float: left;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+        <span>
+            <button onclick="createDiv()">Add</button>
+            <button onclick="removeDiv()">Remove</button>
+        <div class="container"></div>
+</body>
+</html>

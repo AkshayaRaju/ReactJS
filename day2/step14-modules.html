@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modules</title>
+    <!--<script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <script src="https://google.github.io/traceur-compiler/bin/BrowserSystem.js"></script>
+    <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>-->
+    <script type="module">
+        import {Hero} from './modules/Hero.js'
+        var hero = new Hero("Clark","Kent");
+        console.log("Hero's full name -> "+hero.fullname());
+    </script>
+</head>
+<body>
+    <h1>Loading Modules...</h1>
+</body>
+</html>

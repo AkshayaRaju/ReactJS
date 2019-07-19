@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fat Arrow Function</title>
+    <script>
+        let adder = (num1,num2)=>{ 
+            return num1+num2;
+        }
+        console.log("Regular fat arrow Adder output -> "+adder(5,10));
+        let singleLineAdder = (num1,num2)=>num1+num2;
+        console.log("Single line fat arrow Adder output -> "+singleLineAdder(5,10));
+        let addItself = num1 => num1+num1;
+        console.log("Single line fat arrow Add Itself output -> "+addItself(5));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Methods</title>
+    <script>
+        var powers = [6,1,55,97,40,36,12,15,25,7];
+        var doublePowers=[];
+        powers.forEach(function(val,index,arr){
+            doublePowers.push(val*2);
+        });
+        console.log("Double powers using forEach -> "+doublePowers);
+        var doubleAgain = powers.map(function(val,index,arr){
+            return val*2;
+        });
+        console.log("Double powers using map -> "+doubleAgain);
+        var superPowers = powers.filter(function(val,index,arr){
+            return val>10;
+        });
+        console.log("Super powers after applying filter -> "+superPowers);
+        var totalPower = powers.reduce(function(initialVal,currVal,index,arr){
+            return initialVal+currVal;
+        },0);
+        console.log("Total power using reduce -> "+totalPower);
+        var totalPowerFromRight = powers.reduceRight(function(initialVal,currVal,index,arr){
+            return initialVal+currVal;
+        },0);
+        console.log("Total power using reduce right -> "+totalPowerFromRight);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

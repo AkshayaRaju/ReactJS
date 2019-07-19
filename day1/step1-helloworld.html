@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello World</title>
+    <script>
+         window.onload=fun1;
+         window.addEventListener("load",fun2);
+         document.addEventListener("DOMContentLoaded",fun3);
+        function sayHello(){
+            //document.getElementsByTagName("h1")[0].textContent="Hello World";
+            document.querySelectorAll("h1")[0].textContent="Hello World";
+        }
+        function fun1(){
+            console.log("Executing fun1  -> window.onload");
+            sayHello();
+        }
+        function fun2(){
+            console.log("Executing fun2 -> window.addEventListener");
+            sayHello();
+        }
+        function fun3(){
+            console.log("Executing fun3 -> document.addEventListener");
+            sayHello();
+        }
+    </script>
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>

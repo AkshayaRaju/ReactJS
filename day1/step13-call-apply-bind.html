@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Call Apply and Bind</title>
+    <script>
+        var batman = {
+            title : "Batman",
+            firstname: "Bruce",
+            lastname: "Wayne",
+            fullname: function(city){
+                return this.firstname+" "+this.lastname+" from "+city;
+            }
+        };
+        var spiderman = {
+            title: "Spiderman",
+            firstname: "Peter",
+            lastname: "Parker"
+        };
+        console.log("Invoking regular batman fullname -> "+batman.fullname("Gotham"));
+        console.log("Invoking spiderman full name using call -> "+batman.fullname.call(spiderman,"Queens"));
+        console.log("Invoking spiderman full name using apply -> "+batman.fullname.apply(spiderman,["Queens"]));
+        console.log("Invoking spiderman full name using bind -> "+batman.fullname.bind(spiderman,"Queens"));
+        console.log("Invoking and executing spiderman full name using bind -> "+batman.fullname.bind(spiderman,"Queens")());
+        //console.log("Invoking regular spiderman fullname -> "+spiderman.fullname("Queens")); Throws Uncaught Type error not a function
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
