@@ -6,6 +6,7 @@ import React from 'react';
     }
 }*/
 
+//Another way to create a component
 function FirstComponent(props){
     //return <h1>Hello from First Component: {props.message} and {props.secondmessage}</h1>;
     return <h1>{props.children}</h1>
