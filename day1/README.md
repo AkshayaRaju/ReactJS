@@ -6,6 +6,9 @@ Recommended VSCode extensions:
 5. Mithrel Emmit
 6. Open in Browser
 7. jslint
+8. jshint
+9. ESLint
+10. GitLens
 
 References:
 1. caniuse.com

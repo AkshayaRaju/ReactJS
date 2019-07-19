@@ -14,6 +14,7 @@ Libraries:
 1. react -> To build components and enable communication between them.
 2. react-dom -> Renders the components as DOM
 3. react-scripts -> Takes all the js files and transpiles them using Babble and configure it into webpack in order to run via a web server.
+4. react-router-dom -> To enable routing
 	
 Steps to create & run a new REACT project:
 1. create-react-app firstapp
@@ -60,6 +61,7 @@ To resolve this issue, the scope of the component ("this") can be passed using
 
 8. Events
     Event handlers are in camel case & prefixed with "on". Example: onClick, onChange, onFocus.
+    Events can be propagated from parent to child & vice versa by means of props.
     
 9. Forms
     An action of # indicates that the form stays on the same page, i.e, the form is submitted to the same page.
@@ -73,3 +75,8 @@ To resolve this issue, the scope of the component ("this") can be passed using
 
 10. Routes
     Gives user multiple page feeling while actually there is only one underlying page.
+    Makes use of react-router-dom library.
+    exact keyword is used to exactly match the path and component.
+    <Switch> is used to group routes together. It can be used for dynamic route parameters.
+    <Link to> is react equivalent of <a href> except that it doesn't refresh the page.
+    Params can be sent in the link and route can be defined with ":" to accept param of any type. The value sent can be read in the component using props.match.params.xyz
